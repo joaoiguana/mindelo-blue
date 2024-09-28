@@ -1,16 +1,12 @@
 import React from 'react';
 
 const App = () => {
-  const [data, setData] = React.useState([]);
-  React.useEffect(() => {
-    fetch('/api/v1/articles')
-    .then((res) => res.json())
-    .then((data) => setData(data));
-  }, []);
+
+  console.log('yoo'); // This should now log once after the fetch completes
+
   return (
     <div>
-      Articles
-      {data.map(({title}) => <div>{title}</div>)}
+      Mindelo Blue
     </div>
   );
 };
